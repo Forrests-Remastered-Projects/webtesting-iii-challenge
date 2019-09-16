@@ -2,6 +2,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import Controls from "../controls/Controls";
+import renderer from "react-test-renderer";
 
 it("the closed toggle button is disabled if the gate is locked", () => {
   const closedClass = jest.fn();
