@@ -5,6 +5,7 @@ import { render, fireEvent } from "@testing-library/react";
 import Controls from "../controls/Controls";
 import Dashboard from "./Dashboard";
 import renderer from "react-test-renderer";
+import Display from "../display/Display";
 
 it("should invoke a function when unlock or lock gate is clicked", () => {
   const toggleLocked = jest.fn();

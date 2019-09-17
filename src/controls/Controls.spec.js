@@ -3,6 +3,7 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import Controls from "../controls/Controls";
 import renderer from "react-test-renderer";
+import { Display, toggleLocked } from "../controls/Controls";
 
 it("the closed toggle button is disabled if the gate is locked", () => {
   const closedClass = jest.fn();
@@ -12,14 +13,14 @@ it("the closed toggle button is disabled if the gate is locked", () => {
   const { getByText, queryByText } = render(
     <Controls toggleLocked={toggleLocked} locked={locked} closed={closed} />
   );
+});
 
-  it("the locked toggle button is disabled if the gate is open", () => {
-    const toggleLocked = jest.fn();
-    const locked = true;
-    const closed = true;
+it("the locked toggle button is disabled if the gate is open", () => {
+  const toggleLocked = jest.fn();
+  const locked = true;
+  const closed = true;
 
-    const { getByText, queryByText } = render(
-      <Controls toggleLocked={toggleLocked} locked={locked} closed={closed} />
-    );
-  });
+  const { getByText, queryByText } = render(
+    <Controls toggleLocked={toggleLocked} locked={locked} closed={closed} />
+  );
 });

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import Display from "./Display";
+import { Display, toggleLocked } from "../display/Display";
 import renderer from "react-test-renderer";
 
 it("displays Closed if the `closed` prop is `true` and Open if otherwise", () => {
